@@ -1,0 +1,52 @@
+{
+    "type": "defaultthemeresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyDefaultTheme"
+    },
+    "designerId": "e91638ee-6195-41a8-bd67-ae9a09d15584",
+    "storage": {
+        "needsCompile": false,
+        "simple": {},
+        "nameIndex": 1,
+        "varData": {
+            "Ext.tab.Panel": {
+                "globalVars": [
+                    {
+                        "name": "tabs-dark",
+                        "enabled": true,
+                        "value": "rgba(248,20,3,1)"
+                    },
+                    {
+                        "name": "tabs-dark-active-color",
+                        "enabled": true,
+                        "value": "rgba(255,31,1,1)"
+                    },
+                    {
+                        "name": "tabs-light",
+                        "enabled": true,
+                        "value": "rgba(248,20,3,1)"
+                    },
+                    {
+                        "name": "tabs-light-active",
+                        "enabled": true,
+                        "value": "rgba(248,20,3,1)"
+                    }
+                ]
+            },
+            "Ext.Toolbar": {
+                "globalVars": [
+                    {
+                        "name": "toolbar-base-color",
+                        "enabled": true,
+                        "value": "rgba(248,20,3,1)"
+                    }
+                ]
+            }
+        }
+    }
+}

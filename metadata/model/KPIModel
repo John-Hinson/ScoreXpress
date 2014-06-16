@@ -1,0 +1,192 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "KPIModel"
+    },
+    "designerId": "e14379e0-1d8b-49c5-86f3-3eb7ea0ae1f2",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "Kpi-Trk"
+            },
+            "designerId": "94033980-675f-4f83-8bd9-5e71b0594812"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "KPIName"
+            },
+            "designerId": "80ae9f0e-d6e8-4b7e-b1f0-0f6a1a852b81"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CurrentValue"
+            },
+            "designerId": "89e3d5c6-1011-48c0-aa5b-b51424eaefe8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TargetValue"
+            },
+            "designerId": "290837ea-a449-4687-9d16-28acd4463704"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MinTolerance"
+            },
+            "designerId": "459fd89b-ee31-4bee-af87-31514f9aaf94"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MaxTolerance"
+            },
+            "designerId": "4e8dfff8-297f-47df-b7c2-c6a6e0f1bac3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Variance",
+                "type": "float"
+            },
+            "designerId": "c1b5a029-d337-4791-8174-d185905f7750"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PercentChange",
+                "type": "float"
+            },
+            "designerId": "2619f984-8f49-4858-bb01-23249009043a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LowIsBetter",
+                "type": "string"
+            },
+            "designerId": "5cd5e386-0bf8-48b3-8a70-d1a6b39b999a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Comment"
+            },
+            "designerId": "51014950-595f-4852-81af-dcd15863091d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": "Y.m.d",
+                "defaultValue": [
+                    "new Date()"
+                ],
+                "name": "LastUpdate",
+                "type": "date"
+            },
+            "designerId": "856137bc-950c-4650-9804-15da9d28ee98"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": "",
+                "name": "TimeSince",
+                "type": "date"
+            },
+            "designerId": "6e3630c9-360d-4965-9a6d-dfb3b5d0d4ac"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ImageTag"
+            },
+            "designerId": "ce66ff08-f48c-4daf-b370-05789412ac98"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ArrowTag"
+            },
+            "designerId": "b6df7f8a-8dca-4120-bd71-52e77406945f"
+        }
+    ]
+}

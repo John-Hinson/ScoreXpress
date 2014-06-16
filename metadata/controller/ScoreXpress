@@ -1,0 +1,392 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ScoreXpress"
+    },
+    "designerId": "c61fb8f3-b21e-4610-8407-17b6ed8b2230",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#newBtn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onNewBtnTap",
+                "implHandler": [
+                    "",
+                    "this.clearScoreXpressForm();"
+                ],
+                "name": "tap"
+            },
+            "designerId": "c1973f08-ab00-419b-94de-79dca14ab00a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#deleteBtn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onDeleteBtnTap",
+                "implHandler": [
+                    "  //get a reference to the form panel",
+                    "         var fp = this.getScoreXpressForm();",
+                    "",
+                    "         //get the model previously loaded into this form",
+                    "         var mod = fp.getRecord();",
+                    "",
+                    "         //if the model exists, remove it from the \"Assets\" store and go back to this list with a clear form",
+                    "         if (mod){",
+                    "             var as = Ext.getStore('KPIStore');",
+                    "             as.remove(mod);",
+                    "",
+                    "             this.getTopTabBar().setActiveTab(1);",
+                    "             this.clearScoreXpressForm();",
+                    "",
+                    "  }"
+                ],
+                "name": "tap"
+            },
+            "designerId": "f932a686-665e-4737-8189-eb77600c2a28"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "scoreXpressForm",
+                "selector": "scorexpressform"
+            },
+            "designerId": "233c021a-7be1-4727-902a-f065bcec1ba8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "clearScoreXpressForm",
+                "implHandler": [
+                    " // get a reference to the form panel",
+                    "          var fp = this.getScoreXpressForm();",
+                    "",
+                    "          // set all the fields in the form to their default values",
+                    "          fp.setValues({",
+                    "              KPIName: '',",
+                    "              CurrentValue: '',",
+                    "              TargetValue: '',",
+                    "              MinTolerance: 2,",
+                    "              MaxTolerance: 2,",
+                    "              LowIsBetter: 'LowerIsBetter',",
+                    "              Variance: 0,",
+                    "              PercentChange: 0,",
+                    "              Comment: '',",
+                    "              LastUpdate:new Date(),",
+                    "              ImageTag:'6',",
+                    "              TimeSince:'',",
+                    "              ArrowTag:'white-arrow-down'",
+                    "          });",
+                    "",
+                    "          //set the model referenc to null.",
+                    "          //This is necessary because when we tap the save button, we check to",
+                    "          // see whether an existing model has been loaded into the form.",
+                    "          // (see the save funtion for more details)",
+                    "        fp.setRecord(null);"
+                ]
+            },
+            "designerId": "e7e10ced-d2e5-4045-81e8-6df4677834f3"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "topTabBar",
+                "selector": "tabbar"
+            },
+            "designerId": "7e409ef4-5a13-43d9-872e-88503d0b50a8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#saveBtn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onSaveBtnTap",
+                "implHandler": [
+                    " var me = this;",
+                    "",
+                    "        // get a reference to the form panel",
+                    "        var fp = me.getScoreXpressForm();",
+                    "",
+                    "        // get the model previously loaded into this form",
+                    "        var mod = fp.getRecord();",
+                    "",
+                    "        // if model exists, update the model with the",
+                    "        // information from the form",
+                    "        if (mod){",
+                    "           ",
+                    "            fp.updateRecord(mod);",
+                    "            me.doCalculation(mod,fp);",
+                    "               ",
+                    "                 ",
+                    "        }",
+                    "        else{",
+                    "            // otherwise:",
+                    "            // create a new model,",
+                    "            // update it with the form information",
+                    "            // and add it to the store",
+                    "            mod = Ext.create('ScoreXpress.model.KPIModel');",
+                    "           ",
+                    "            ",
+                    "            fp.updateRecord(mod);",
+                    "           ",
+                    "            ",
+                    "             me.doCalculation(mod,fp);",
+                    "            Ext.getStore('KPIStore').add(mod);",
+                    "            ",
+                    "            ",
+                    "         ",
+                    "        }",
+                    "",
+                    "      ",
+                    "",
+                    "        Ext.Msg.alert('Success','Your info was saved successfully', function(){",
+                    "            me.clearScoreXpressForm();",
+                    "",
+                    "        });",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "designerId": "25027e59-5bd9-40f7-a480-10ffa3f1055d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#addBtn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onAddBtnTap",
+                "implHandler": [
+                    "this.clearScoreXpressForm();",
+                    "this.getTopTabBar().setActiveTab(1);",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "designerId": "50253c08-2daa-4639-883c-cc50136b097f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#scoreList",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onScoreListItemTap",
+                "implHandler": [
+                    "\t// the record parameter passed to this function contains a pointer",
+                    "        // to the model that the user tapped in the list",
+                    "        // load this model's data into the form",
+                    "        this.getScoreXpressForm().setRecord(record);",
+                    "",
+                    "        // then, make the form visible:",
+                    "        //   switch over to the Entry tab (the first tab)",
+                    "        this.getTopTabBar().setActiveTab(1);"
+                ],
+                "name": "itemtap"
+            },
+            "designerId": "6c98a226-a893-40a8-8a47-2312fa109c13"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "mod",
+                    "fp"
+                ],
+                "fn": "doCalculation",
+                "implHandler": [
+                    "",
+                    "",
+                    "               var vCurrentValue = mod.get('CurrentValue');",
+                    "",
+                    "               var vTargetValue = mod.get('TargetValue');",
+                    "               var vMinTolerance = mod.get('MinTolerance');",
+                    "               var vMaxTolerance = mod.get('MaxTolerance');",
+                    "               var vLastUpdate = mod.get('LastUpdate');",
+                    "               var vTimeSince = mod.get('TimeSince');",
+                    "               var vPercentChange = mod.get('PercentChange');",
+                    "               var vImageTag = mod.get('ImageTag');",
+                    "               var vLowerIsBetter = mod.get('LowIsBetter');",
+                    "               var vConsLowerIsBetter = \"LowerIsBetter\";",
+                    "               var vConsHigherIsBetter = \"HigherIsBetter\";",
+                    "               var vArrowTag =mod.get('ArrowTag');",
+                    "",
+                    "",
+                    "",
+                    "               var vPercentChanged, vPercentDecimal;",
+                    "",
+                    "              //Finding the Variance",
+                    "               var vVarianceTotal = vCurrentValue - vTargetValue;",
+                    "               var vVariance = Math.round(vVarianceTotal * 10) / 10;",
+                    "",
+                    "",
+                    "               var vFlagColor;",
+                    "",
+                    "               //Setting up PercentChange",
+                    "               vPercentDecimal = vVariance / vTargetValue;",
+                    "               vPercentChanged= vPercentDecimal * 100;",
+                    "               vPercentChange=vPercentChanged.toFixed(2);",
+                    "",
+                    "/*var num = parseFloat(15.7784514);",
+                    "document.write(num.toFixed(1)+\"<br />\");",
+                    "document.write(num.toFixed(2)+\"<br />\");",
+                    "document.write(num.toFixed(3)+\"<br />\");",
+                    "document.write(num.toFixed(10));",
+                    "",
+                    "15.8",
+                    "15.78",
+                    "15.778",
+                    "15.7784514000",
+                    "*/",
+                    "",
+                    "",
+                    "               var today= new Date();",
+                    "",
+                    "               //Finding the Days since last update",
+                    "               var vTimeSince = vLastUpdate;",
+                    "",
+                    "",
+                    "",
+                    "               //Setting up variance",
+                    "               Ext.getCmp('Variance').setValue(vVariance);",
+                    "",
+                    "               mod.set(Variance, vVariance);",
+                    "",
+                    "",
+                    "               //Setting up LastUpdate",
+                    "               //Ext.getCmp('LastUpdate').setValue(vLastUpdate);",
+                    "",
+                    "              // mod.set(LastUpdate, vLastUpdate);",
+                    "",
+                    "             //Setting up TimeSince",
+                    "               Ext.getCmp('TimeSince').setValue(vTimeSince);",
+                    "",
+                    "               mod.set(TimeSince, vTimeSince);",
+                    "",
+                    "",
+                    "",
+                    "              //SetArrow",
+                    "                if (vVariance > 0){",
+                    "                         vArrowTag=\"white-arrow-up\";",
+                    "                    }else{",
+                    "                         vArrowTag=\"white-arrow-down\";",
+                    "",
+                    "                }",
+                    "                Ext.getCmp('ArrowTag').setValue(vArrowTag);",
+                    "",
+                    "                 mod.set(ArrowTag, vArrowTag);",
+                    "",
+                    "",
+                    "",
+                    "               //Variance Changed",
+                    "               Ext.getCmp('PercentChange').setValue(vPercentChange);",
+                    "",
+                    "               mod.set(PercentChange, vPercentChange);",
+                    "",
+                    "",
+                    "                //Setting Badge Color",
+                    "                //alert(vLowerIsBetter);",
+                    "                //Green",
+                    "                if (vPercentChange > vMaxTolerance){",
+                    "                    if(vConsLowerIsBetter == vLowerIsBetter){",
+                    "",
+                    "                         vImageTag=\"5\";",
+                    "                    }else{",
+                    "                         vImageTag=\"1\";",
+                    "",
+                    "                    }",
+                    "",
+                    "",
+                    "                }",
+                    "",
+                    "                //Red",
+                    "                if (vPercentChange < vMaxTolerance){",
+                    "                    if(vConsHigherIsBetter == vLowerIsBetter){",
+                    "",
+                    "                         vImageTag=\"1\";",
+                    "                    }else{",
+                    "                         vImageTag=\"5\";",
+                    "",
+                    "                    }",
+                    "",
+                    "                }",
+                    "",
+                    "",
+                    "//alert(\"Min Tolerance:  \" + -Math.abs(vMinTolerance) + \"Max Tolerance:  \" + vMaxTolerance + \" -  Percent Change: \" +  vPercentChange);",
+                    "                //Yellow",
+                    "                if (vPercentChange > -Math.abs(vMinTolerance) && vPercentChange < vMaxTolerance){",
+                    "                    vImageTag=\"3\";",
+                    "",
+                    "                }",
+                    "",
+                    "               //Change Badge Color and Set Image",
+                    "               Ext.getCmp('ImageTag').setValue(vImageTag);",
+                    "",
+                    "               mod.set(ImageTag, vImageTag);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "               fp.updateRecord(mod);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "designerId": "f6a3b0f8-72ad-42e7-96d1-711d5f936eb8"
+        }
+    ]
+}

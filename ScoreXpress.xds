@@ -1,0 +1,82 @@
+{
+    "name": "ScoreXpress",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "4.0.4.84",
+            "frameworkVersion": "2.3.1.410"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "http://localhost/sencha-architect/scoreXpress",
+        "exportPath": "/Users/jdean011/Desktop/Deploypro/",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "displayfield-ExtBox1-1318-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1430-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1480-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1530-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1290-inputEl": "Not Installed",
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        },
+        "displayfield-ExtBox1-1400-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1450-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1504-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1330-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1380-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1275-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1279-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1335-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1385-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1495-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1545-inputEl": "Not Installed",
+        "displayfield-ExtBox1-3085-inputEl": "Not Installed"
+    },
+    "xdsVersion": "3.0.4",
+    "xdsBuild": 1386,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000004,
+    "framework": "touch23",
+    "viewOrderMap": {
+        "view": [
+            "c75522ff-bc1e-4e4b-958b-1eb4255d716d",
+            "57417f58-cc53-4e83-b605-1cb74eb29c97",
+            "f12df3de-0887-4a77-aee5-d16921cd9fef"
+        ],
+        "store": [
+            "481619e6-e46f-4393-9d09-a5ec6a942552",
+            "8f408f16-5bae-450b-a2b6-3d5b8c87e157"
+        ],
+        "controller": [
+            "c61fb8f3-b21e-4610-8407-17b6ed8b2230"
+        ],
+        "model": [
+            "e14379e0-1d8b-49c5-86f3-3eb7ea0ae1f2",
+            "bef2096b-ccbb-4d5b-893a-1d5f15f59f29"
+        ],
+        "resource": [
+            "fee3e1f6-3c8c-4ea1-bb7e-b912cf7d0037",
+            "e91638ee-6195-41a8-bd67-ae9a09d15584",
+            "c503ed60-4246-4a11-b28c-15f9f2b6c675",
+            "c18f8e7e-403e-4168-aaf3-461565bc4ee2",
+            "bd7a83dd-a4ac-4e7f-a9fe-bff44704a3d2"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

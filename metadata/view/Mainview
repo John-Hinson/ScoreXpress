@@ -1,0 +1,160 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "Mainview",
+        "designer|userClassName": "Mainview",
+        "layout": "fit"
+    },
+    "designerId": "c75522ff-bc1e-4e4b-958b-1eb4255d716d",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "<img height=35px width=35px  src=\"resources/img/cloudcircle.png\" /><font size=\"4\" color=\"white\">ScoreXpress</font>"
+            },
+            "designerId": "6dba801e-9a3c-4188-98bd-9a09fcd542d3",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "tpl",
+                        "implHandler": [
+                            "<img width = 80 height= 80  align=\"left\" src=\"resources/img/lowdown.png\">"
+                        ]
+                    },
+                    "designerId": "2025de5f-9aac-4873-afb0-39aebcd81aae"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "944394da-34af-493d-bfdb-483f080a1688",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "fit",
+                        "title": "List"
+                    },
+                    "designerId": "3744d817-582e-4840-8fc5-096d7ab9a277",
+                    "cn": [
+                        {
+                            "type": "Ext.Toolbar",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "bottom",
+                                "html": "",
+                                "title": "<font size=\"1\" color=\"white\">&#0169; 2014 Acentia All Rights Reserved.</font>"
+                            },
+                            "designerId": "0f5f31d7-d951-478a-9cca-9186f50debcd",
+                            "cn": [
+                                {
+                                    "type": "Ext.Spacer",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "designerId": "64ef1f0d-ab7a-446e-8de8-41afb466fc4a"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "addBtn",
+                                        "itemId": "mybutton3",
+                                        "text": "Add"
+                                    },
+                                    "designerId": "b51bebd7-8933-4295-ada5-3be27f7f22a2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "linkedinstance",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "designerId": "cc555495-666a-4b0f-9936-c4bd7f48efdd",
+                            "masterInstanceId": "f12df3de-0887-4a77-aee5-d16921cd9fef"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "fit",
+                        "title": "Edit"
+                    },
+                    "designerId": "442a0b7e-f58d-48de-8284-1fefb92416d7",
+                    "cn": [
+                        {
+                            "type": "linkedinstance",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "designerId": "aaf955fc-df4a-49f4-8f62-90407f4e7d31",
+                            "masterInstanceId": "57417f58-cc53-4e83-b605-1cb74eb29c97"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.tab.Bar",
+                    "reference": {
+                        "name": "tabBar",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "center",
+                        "docked": "top"
+                    },
+                    "designerId": "77b72bf4-48b0-4241-b2e9-6b5154df25da"
+                }
+            ]
+        }
+    ]
+}

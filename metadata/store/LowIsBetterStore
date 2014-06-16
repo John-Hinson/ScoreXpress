@@ -1,0 +1,26 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "    \"id\": 'LowerIsBetter',",
+            "    \"name\" : 'Lower Is Better'",
+            "\t},",
+            "    {",
+            "    \"id\": 'HigherIsBetter',",
+            "    \"name\" : 'Higher Is Better'",
+            "\t}",
+            "]"
+        ],
+        "designer|userClassName": "LowIsBetterStore",
+        "model": "LowIsBetter",
+        "storeId": "LowIsBetterStore"
+    },
+    "designerId": "8f408f16-5bae-450b-a2b6-3d5b8c87e157"
+}

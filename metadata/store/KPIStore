@@ -1,0 +1,16 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "designer|userClassName": "KPIStore",
+        "model": "KPIModel",
+        "storeId": "KPIStore"
+    },
+    "designerId": "481619e6-e46f-4393-9d09-a5ec6a942552"
+}

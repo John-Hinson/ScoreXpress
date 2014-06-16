@@ -1,0 +1,289 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "scorexpressform",
+        "designer|userClassName": "ScoreXpressForm",
+        "layout": "fit",
+        "scrollable": false
+    },
+    "designerId": "57417f58-cc53-4e83-b605-1cb74eb29c97",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "scrollable": true,
+                "title": "KPI Info"
+            },
+            "designerId": "d5c6589e-ee5c-4eae-9f2a-3610536f58c9",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "KPIName",
+                        "label": "Name",
+                        "name": "KPIName"
+                    },
+                    "designerId": "a5ecd81f-d959-4642-8ab1-798cb66664b4"
+                },
+                {
+                    "type": "Ext.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "CurrentValue",
+                        "label": "Current Value",
+                        "name": "CurrentValue"
+                    },
+                    "designerId": "dde0b5dc-b7f8-4fa8-b1db-9cfb704c98eb"
+                },
+                {
+                    "type": "Ext.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "TargetValue",
+                        "label": "Target Value",
+                        "name": "TargetValue"
+                    },
+                    "designerId": "2035d2bd-0d7b-4452-bdee-591675fa1e81"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "name",
+                        "id": "LowIsBetter",
+                        "label": "LowIsBetter",
+                        "name": "LowIsBetter",
+                        "store": "LowIsBetterStore",
+                        "valueField": "id"
+                    },
+                    "designerId": "50060a45-a909-45e4-bfee-722ab3be6e23"
+                },
+                {
+                    "type": "Ext.field.Spinner",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "MinTolerance",
+                        "label": "MinTolerance",
+                        "maxValue": 100,
+                        "minValue": 0,
+                        "name": "MinTolerance"
+                    },
+                    "designerId": "d3257d68-ca95-48bb-95f6-09d79a2f7ea0"
+                },
+                {
+                    "type": "Ext.field.Spinner",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "MaxTolerance",
+                        "label": "MinTolerance",
+                        "maxValue": 100,
+                        "minValue": 0,
+                        "name": "MaxTolerance"
+                    },
+                    "designerId": "1a98ccf4-8d30-449f-8dc9-18ed3bb257d8"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Variance",
+                        "name": "Variance"
+                    },
+                    "designerId": "52d9e962-c9b0-472c-aefe-b617c2f068b6"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "PercentChange",
+                        "name": "PercentChange"
+                    },
+                    "designerId": "3924fe57-cf52-4f7b-a4f9-fc427e3b2885"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "LastUpdate",
+                        "name": "LastUpdate"
+                    },
+                    "designerId": "fc96ba46-2a4f-4f33-8478-555f6b3fec8f"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "TimeSince",
+                        "name": "TimeSince"
+                    },
+                    "designerId": "f88ebffc-ec74-498c-9952-af6e37722448"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "ImageTag",
+                        "name": "ImageTag"
+                    },
+                    "designerId": "9d0631d8-9db6-42f8-ad9a-e2bec406a1ba"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "ArrowTag",
+                        "name": "ArrowTag"
+                    },
+                    "designerId": "8b15e859-40d5-4cdd-a282-ea3dd060a062"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "Comment",
+                        "label": "Comment",
+                        "name": "Comment"
+                    },
+                    "designerId": "514dc9ef-6733-48e3-9d7c-4108c7332508"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top"
+            },
+            "designerId": "bc7a02f9-3067-4e39-b3a9-f55382cc6204",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "newBtn",
+                        "itemId": "mybutton",
+                        "text": "New"
+                    },
+                    "designerId": "19c77cb2-7761-4928-b7e6-ce5753e276df"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "23a7fcdc-da6a-4722-88e4-a078a1603668"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "deleteBtn",
+                        "itemId": "mybutton1",
+                        "text": "Delete"
+                    },
+                    "designerId": "4554fd60-66a1-4a5e-a5d3-4861d6bcb58d"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "2a2dce54-9d48-4065-a2dd-6c37de5f3baa"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "saveBtn",
+                        "itemId": "mybutton2",
+                        "text": "Save"
+                    },
+                    "designerId": "8e4e5285-743a-44cb-8d51-5b8cc2a3a765"
+                }
+            ]
+        }
+    ]
+}
